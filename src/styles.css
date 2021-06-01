@@ -11,6 +11,12 @@
   color: var(--base);
 }
 
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
 a {
   text-decoration: none;
 }
