@@ -57,6 +57,11 @@ input:focus {
   font-size: 2rem;
 }
 
+.result .description {
+  font-size: 1.9em;
+  font-weight: bold;
+}
+
 .result .date {
   margin-top: 50px;
   font-weight: bold;

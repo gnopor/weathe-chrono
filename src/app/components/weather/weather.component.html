@@ -4,10 +4,11 @@
 
   <div class="container weather">
     <input type="text" name="text" placeholder="Enter town here..." />
-    <div class="result">
-      <span class="location">Douala, Cameroun</span>
-      <span class="value">30</span>
-      <span class="date">Mon, 04 June 2021</span>
+    <div *ngIf="weather" class="result">
+      <span class="location">{{ weather.town }}, {{ weather.country }}</span>
+      <span class="value">{{ weather.temperature }}</span>
+      <span class="description">{{ weather.description }}</span>
+      <span class="date">{{ formatDate() }}</span>
     </div>
   </div>
 </section>

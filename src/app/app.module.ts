@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ChronoComponent } from './components/chrono/chrono.component';
@@ -14,8 +16,19 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, ChronoComponent, WeatherComponent, HeaderComponent, BgComponent],
-  imports: [BrowserModule, RouterModule.forRoot(appRoutes)],
+  declarations: [
+    AppComponent,
+    ChronoComponent,
+    WeatherComponent,
+    HeaderComponent,
+    BgComponent,
+  ],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    FormsModule,
+    RouterModule.forRoot(appRoutes),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
