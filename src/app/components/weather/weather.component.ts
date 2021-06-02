@@ -61,6 +61,13 @@ export class WeatherComponent implements OnInit {
       });
   }
 
+  onInput(event: KeyboardEvent) {
+    if (event.code === 'Enter') {
+      this.fetchWeather(this.query);
+      this.query = '';
+    }
+  }
+
   formatDate(date: Date = new Date()): string {
     let months = [
       'January',

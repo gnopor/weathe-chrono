@@ -3,7 +3,13 @@
   <app-bg></app-bg>
 
   <div class="container weather">
-    <input type="text" name="text" placeholder="Enter town here..." />
+    <input
+      [(ngModel)]="query"
+      type="text"
+      name="text"
+      placeholder="Enter town here..."
+      (keyup)="onInput($event)"
+    />
     <div *ngIf="weather" class="result">
       <span class="location">{{ weather.town }}, {{ weather.country }}</span>
       <span class="value">{{ weather.temperature }}</span>
