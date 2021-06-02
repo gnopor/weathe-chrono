@@ -1,3 +1,63 @@
 #weather {
   height: 100vh;
 }
+
+.weather {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* ==> input  */
+input {
+  color: #333;
+  font-weight: bold;
+  font-style: italic;
+  padding: 10px;
+  border-radius: 10px;
+  width: 350px;
+}
+
+input::placeholder {
+  color: #333;
+  font-weight: bold;
+  font-style: italic;
+}
+
+input:focus {
+  outline: none;
+  border: none;
+}
+
+/* ==> .result */
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0;
+}
+
+.result .location {
+  font-size: 1.7em;
+}
+
+.result .value {
+  position: relative;
+  font-size: 8em;
+  font-weight: bold;
+}
+.result .value::after {
+  content: "°c";
+  position: absolute;
+  top: 0;
+  right: -2rem;
+  font-size: 2rem;
+}
+
+.result .date {
+  margin-top: 50px;
+  font-weight: bold;
+}

@@ -4,7 +4,8 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class UiService {
-  image_cold = 'assets/images/test.png';
+  image_cold = 'assets/images/cold-bg.jpg';
+  image_hot = 'assets/images/warm-bg.jpg';
   bg_image = this.image_cold;
 
   constructor() {}
