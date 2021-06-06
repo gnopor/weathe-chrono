@@ -24,6 +24,10 @@ button {
   cursor: pointer;
 }
 
+button:focus {
+  outline: none;
+}
+
 .stop {
   background: tomato;
 }

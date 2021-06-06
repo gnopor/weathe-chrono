@@ -1,6 +1,10 @@
 <!-- custom bg  -->
 <app-bg></app-bg>
 <div id="chrono" class="container">
-  <span>00:00:00</span>
-  <button>Start</button>
+  <span>
+    {{ formatValue(minute) }}:{{ formatValue(second) }}:{{
+      formatValue(tierce)
+    }}
+  </span>
+  <button (click)="onAction($event)">{{ button_text }}</button>
 </div>
